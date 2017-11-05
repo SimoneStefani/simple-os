@@ -9,5 +9,6 @@
   "os": "none",
   "features": "-mmx,-sse,+soft-float",
   "disable-redzone": true,
-  "panic": "abort"
+  "panic": "abort",
+  "panic-strategy": "abort"
 }
