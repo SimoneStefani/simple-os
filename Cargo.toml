@@ -1,0 +1,7 @@
+[package]
+name = "simple-os"
+version = "0.1.0"
+authors = ["Simone Stefani <sstefani@kth.se>"]
+
+[lib]
+crate-type = ["staticlib"]
