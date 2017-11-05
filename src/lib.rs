@@ -7,6 +7,7 @@
 
 extern crate rlibc;
 extern crate volatile;
+extern crate spin;
 
 #[macro_use]
 mod vga_buffer;
@@ -28,7 +29,12 @@ pub extern fn rust_main() {
     // unsafe { *buffer_ptr = hello_colored };
 
     // loop{}
-    vga_buffer::print_something();
+    // vga_buffer::print_something();
+
+    use core::fmt::Write;
+    vga_buffer::WRITER.lock().write_str("Hello again");
+    write!(vga_buffer::WRITER.lock(), ", some numbers: {} {}", 42, 1.337);
+    loop{}
 }
 
 // Handle unwinding and panic
