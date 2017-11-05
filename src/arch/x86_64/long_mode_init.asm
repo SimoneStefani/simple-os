@@ -11,6 +11,10 @@ long_mode_start:
     mov fs, ax
     mov gs, ax
 
+    ; call the rust main
+    extern rust_main
+    call rust_main
+
     ; print `PEW!` to screen
     mov rax, 0x2f212f572f452f50
     mov qword [0xb8000], rax

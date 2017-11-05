@@ -5,3 +5,6 @@ authors = ["Simone Stefani <sstefani@kth.se>"]
 
 [lib]
 crate-type = ["staticlib"]
+
+[dependencies]
+rlibc = "1.0"
