@@ -6,6 +6,7 @@
 #![no_std] // Don't link std lib
 
 extern crate rlibc;
+extern crate volatile;
 
 #[macro_use]
 mod vga_buffer;
